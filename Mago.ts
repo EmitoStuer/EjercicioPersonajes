@@ -15,6 +15,11 @@ export class Mago extends Personaje {
       return this.mana;
     }
   
+    atacar(personaje:Personaje):void {
+      console.log(`${this.nombre} ataca basico ${2} puntos de fuerza.`);
+      personaje.recibirDaño(10);
+    }
+
     lanzarHechizo(personaje:Personaje):void{
         this.mana-=1;
       console.log(`${this.nombre} lanza un hechizo, le quedan ${this.mana} puntos de maná.`);
